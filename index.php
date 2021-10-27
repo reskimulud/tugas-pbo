@@ -13,8 +13,8 @@ class user{
         echo $this->name;
     }
 
-    protected function getAge() {
-        return date('Y') - $this->$birthYear;
+    public function getAge() {
+        return date('Y') - $this->birthYear;
     }
 }
 
