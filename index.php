@@ -9,7 +9,7 @@ class user{
         $this->email = $email;
     }
 
-    public function getname() {
+    protected function getname() {
         echo $this->name;
     }
 
@@ -18,8 +18,18 @@ class user{
     }
 }
 
+class member extends user {
+    
+    
+    public function {
+        
+    }
+}
+
+class admin extends user {
 
 
+}
 ?>
 
 # comand
