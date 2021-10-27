@@ -1,16 +1,19 @@
 <?php
-class User{
+class User
+{
     public $name;
     public $email;
     public $birthYear;
     public $address;
 
-    protected function __construct($name, $email) {
+    protected function __construct($name, $email)
+    {
         $this->name = $name;
         $this->email = $email;
     }
 
-    protected function setName($newName) {
+    protected function setName($newName)
+    {
         if ($newName != $this->name) {
             $this->name = $newName;
         } else {
@@ -18,47 +21,53 @@ class User{
         }
     }
 
-    public function getName() {
+    public function getName()
+    {
         return $this->name;
     }
 
-    public function getAge() {
+    public function getAge()
+    {
         return date('Y') - $this->birthYear;
     }
 
-    public function getProperties() {
+    public function getProperties()
+    {
         return "Nama : $this->name, Email : $this->email";
     }
 }
 
-class Member extends User {
+class Member extends User
+{
 
-    public $memberId;
+    private $memberId;
 
-    public function __construct($name, $email) {
+    public function __construct($name, $email)
+    {
         parent::__construct($name, $email);
         $this->memberId = 'M' . time();
     }
 
-    public function updateName($newName) {
+    public function updateName($newName)
+    {
         try {
             parent::setName($newName);
         } catch (Exception $e) {
             echo "Error : " . $e;
         }
     }
-
 }
 
-class Admin extends User {
-    
-    public $adminId;
+class Admin extends User
+{
 
-    public function __construct($name, $email) {
+    private $adminId;
+
+    public function __construct($name, $email)
+    {
         parent::__construct($name, $email);
         $this->adminId = 'M' . time();
     }
-
 }
 
 $deri = new Admin('Deri Kurniawan', 'deri.netuchi@gmail.com');
