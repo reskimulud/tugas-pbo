@@ -14,7 +14,7 @@ class user{
     }
 
     public function getAge() {
-        return date('Y') - $this.$birthYear;
+        return date('Y') - $this->birthYear;
     }
 }
 
