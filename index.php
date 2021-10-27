@@ -33,11 +33,11 @@ class User{
 
 class Member extends User {
 
-    public $userId;
+    public $memberId;
 
     public function __construct($name, $email) {
         parent::__construct($name, $email);
-        $this->userId = 'M' . time();
+        $this->memberId = 'M' . time();
     }
 
     public function updateName($newName) {
@@ -51,9 +51,18 @@ class Member extends User {
 }
 
 class Admin extends User {
+    
+    public $adminId;
 
+    public function __construct($name, $email) {
+        parent::__construct($name, $email);
+        $this->adminId = 'M' . time();
+    }
 
 }
+
+$deri = new Admin('Deri Kurniawan', 'deri.netuchi@gmail.com');
+echo $deri->getProperties();
 
 $reski = new Member("Reski Mulud", "reski.mulud@gmail.com");
 echo $reski->getProperties();
@@ -61,5 +70,3 @@ echo $reski->getProperties();
 #update name
 $reski->updateName("Reski Mulud");
 echo $reski->name; // error karena nama awal sama dengan nama yang baru
-
-?>
