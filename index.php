@@ -79,3 +79,5 @@ echo $reski->getProperties();
 #update name
 $reski->updateName("Reski Mulud");
 echo $reski->name; // error karena nama awal sama dengan nama yang baru
+
+?>
