@@ -66,7 +66,7 @@ class Admin extends User
     public function __construct($name, $email)
     {
         parent::__construct($name, $email);
-        $this->adminId = 'M' . time();
+        $this->adminId = 'A' . time();
     }
 }
 
