@@ -9,17 +9,27 @@ class user{
         $this->email = $email;
     }
 
-    public function getname() {
+    protected function getname() {
         echo $this->name;
     }
 
-    public function getAge() {
-        return date('Y') - $this.$birthYear;
+    protected function getAge() {
+        return date('Y') - $this->$birthYear;
     }
 }
 
+class member extends user {
+    
+    
+    public function {
+        
+    }
+}
+
+class admin extends user {
 
 
+}
 ?>
 
 # comand
