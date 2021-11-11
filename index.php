@@ -35,6 +35,10 @@ class User
     {
         return "Nama : $this->name, Email : $this->email";
     }
+
+    public function __destruct(){
+        echo "ini destruct"
+    }
 }
 
 class Member extends User
