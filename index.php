@@ -31,13 +31,8 @@ class User
         return date('Y') - $this->birthYear;
     }
 
-    public function getProperties()
-    {
-        return "Nama : $this->name, Email : $this->email";
-    }
-
     public function __destruct(){
-        echo "ini destruct"
+        echo "Nama : $this->name, Email : $this->email";
     }
 }
 
@@ -75,10 +70,10 @@ class Admin extends User
 }
 
 $deri = new Admin('Deri Kurniawan', 'deri.netuchi@gmail.com');
-echo $deri->getProperties();
+$deri;
 
 $reski = new Member("Reski Mulud", "reski.mulud@gmail.com");
-echo $reski->getProperties();
+$reski;
 
 #update name
 $reski->updateName("Reski Mulud");
