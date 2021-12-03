@@ -1,5 +1,5 @@
 <?php
-interface Bentuk
+interface Keluaran
 {
   public function tampilkan_hasil();
   public function tampilkan_rumus();
@@ -10,7 +10,7 @@ abstract class Ekspetasi_bentuk
   abstract public function hitung_luas(): int;
 }
 
-class Lingkaran extends Ekspetasi_bentuk implements Bentuk
+class Lingkaran extends Ekspetasi_bentuk implements Keluaran
 {
   private $jari_jari;
 
@@ -35,7 +35,7 @@ class Lingkaran extends Ekspetasi_bentuk implements Bentuk
   }
 }
 
-class Persegi_panjang extends Ekspetasi_bentuk implements Bentuk
+class Persegi_panjang extends Ekspetasi_bentuk implements Keluaran
 {
   private $tinggi;
   private $lebar;
